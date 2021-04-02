@@ -11,7 +11,7 @@ $ docker-compose -f docker-compose-mysql.yaml ps
 $ docker-compose -f docker-compose-mysql.yaml  down
 ```
 
-Debezium uses MySQL’s binlog facility to extract events, and you need to configure MySQL to enable it. Here is the bare-basics necessary to get this working. We make it default on this PR already. https://github.ibm.com/yen/terraform_3piece_zabbix/blob/master/my.cnf
+Debezium uses MySQL’s binlog facility to extract events, and you need to configure MySQL to enable it. Here is the bare-basics necessary to get this working.
 
 ```
 $ mysqladmin -h127.0.0.1 variables -uroot -p'secret' | grep log_bin
