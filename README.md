@@ -8,7 +8,7 @@ $ export DEBEZIUM_VERSION=1.4
 $ docker-compose -f docker-compose-mysql.yaml up -d
 $ docker-compose -f docker-compose-mysql.yaml ps
 
-$ docker-compose -f docker-compose-mysql.yaml  down
+$ docker-compose -f docker-compose-mysql.yaml down
 ```
 
 Debezium uses MySQL’s binlog facility to extract events, and you need to configure MySQL to enable it. Here is the bare-basics necessary to get this working.
@@ -64,7 +64,7 @@ Server: Jetty(9.4.33.v20201020)
 You can check linked DB tables like this as well
 
 ```
-$ docker exec -it tutorial_kafka_1 ./bin/kafka-topics.sh --zookeeper 192.168.0.27:2181 --list
+$ docker exec -it mysqlcdc_kafka_1 ./bin/kafka-topics.sh --zookeeper 192.168.0.27:2181 --list
 zabbix.zabbix.actions
 zabbix.zabbix.application_prototype
 zabbix.zabbix.application_template
